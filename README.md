@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FPC (Fit People Cook)
 
-## Getting Started
+Create, find and share unique recipes upvoted by a community and friends. Easily add ingredients to your shopping list so you don't forget anything and make your grocery store run smooth.
+**Link to project:** http://fake-link.com
 
-First, run the development server:
+<!-- ![alt tag](/aptiv.png) -->
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## How It's Made:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Tech used:** React, Next js, TypeScript, SQLite, TailWind
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Built with Next/React front end and an Express backend. Tailwind, SCSS, and MUI components were used for styling. MongoDB is used for the database, with passport js for user auth, and passwords encrypted with bcrypt.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Optimizations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Lessons Learned:
 
-## Learn More
+## To-Do
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    -user auth (JWT, Google Auth)
+    -Create Models
+    -Choose color scheme (https://material.io/resources/color/#!/?view.left=0&view.right=0)
