@@ -8,6 +8,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'lh3.googleusercontent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'nix-tag-images.s3.amazonaws.com',
+      },
     ],
   },
 };
