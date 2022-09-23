@@ -1,7 +1,41 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Nav from '../components/nav';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+declare var process: {
+  env: {
+    X_APP_KEY: string;
+    X_APP_ID: string;
+  };
+};
 const Home: NextPage = () => {
+  const [data, setData] = useState(false);
+  const getNutritionData = async (string: String) => {
+    const config = {
+      headers: {
+        'x-app-key': ``,
+        'x-remote-user-id': '0',
+        'x-app-id': ``,
+      },
+    };
+    const res = await axios.post(
+      'https://trackapi.nutritionix.com/v2/natural/nutrients',
+      { query: string },
+      config
+    );
+    if (res && res.data && res.data.foods) {
+      return res.data.foods;
+    } else {
+      return false;
+    }
+  };
+  // useEffect(async () => {
+  //   setData(await getNutritionData('1 cup of rice and .5lb chicken breast'));
+  // }, []);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
   return (
     <div>
       <Head>
@@ -12,6 +46,7 @@ const Home: NextPage = () => {
       <main className="bg-red-500 min-h-screen">
         <Nav />
         <h1 className="text-center text-3xl font-extrabold">Fit People Cook</h1>
+        {JSON.stringify(data)}
       </main>
     </div>
   );
