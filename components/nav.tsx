@@ -10,7 +10,7 @@ const Nav: NextPage = () => {
 
   const { data: session } = useSession();
   return (
-    <nav className="w-screen border border-black p-4 flex justify-center gap-4">
+    <nav className="w-screen border border-black p-4 flex justify-center gap-4 bg-white">
       <Link href={'/'}>
         <Button variant="outlined">Home</Button>
       </Link>
@@ -22,12 +22,15 @@ const Nav: NextPage = () => {
       ) : (
         <div className="flex items-center gap-3 bg-white p-4">
           <p>Welcome, {session?.user?.name}</p>
-          <Image
-            src={session.user.image}
-            width={'50px'}
-            height={'50px'}
-            className="rounded-full"
-          />
+          <Link href={'/user/account'}>
+            <Image
+              src={session.user.image}
+              width={'50px'}
+              height={'50px'}
+              className="rounded-full hover:cursor-pointer"
+            />
+          </Link>
+
           <Link href={'/user/account'}>
             <Button variant="outlined">Account Page</Button>
           </Link>

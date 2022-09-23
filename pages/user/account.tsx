@@ -17,7 +17,7 @@ const SignUp: NextPage = () => {
     return (
       <div>
         <Head>
-          <title>FPC Accoutn</title>
+          <title>Fit People Cook</title>
           <meta name="description" content="Sign up for Fit People Cook" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
